@@ -36,9 +36,7 @@ class AjouterIntervention : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ajouter_intervention)
 
-        var tags = ArrayList<String>()
-        tags.add("Android")
-        tags.add("Angular")
+
 
 
 

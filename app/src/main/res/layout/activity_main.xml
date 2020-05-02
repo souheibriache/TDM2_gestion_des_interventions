@@ -39,59 +39,6 @@
         app:layout_constraintTop_toBottomOf="@+id/rechercher_par_date_btn" />
 
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:id="@+id/numero"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_margin="5dp"
-            android:text="numero" />
-
-        <TextView
-            android:id="@+id/nom"
-            android:layout_width="109dp"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_margin="5dp"
-            android:text="nom" />
-
-        <TextView
-            android:id="@+id/type"
-            android:layout_width="109dp"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_margin="5dp"
-            android:text="type" />
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="109dp"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_margin="5dp"
-            android:text="Date" />
-
-    </LinearLayout>
-
     <androidx.recyclerview.widget.RecyclerView
 
         android:id="@+id/recyclerView"
@@ -99,13 +46,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/add_intervention"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
     <Button

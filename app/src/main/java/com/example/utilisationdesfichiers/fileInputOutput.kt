@@ -68,7 +68,7 @@ fun readFile(fileName: String , context: Context): String? {
  fun writeFile(data: String, fileName: String , context: Context) {
     if (isExternalStorageWritable()) {
         val textFile = File(context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), "$fileName.json")
-
+        textFile.writeText("")
 
         context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)?.mkdir()
         try {

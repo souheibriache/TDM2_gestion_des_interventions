@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var add_intervention : Button
     lateinit var recyclerView: RecyclerView
     lateinit var rechercherParDateBtn : Button
-    var listIntervention = arrayListOf<Intervention>()
-    var adapter = InterventionAdapter(listIntervention , this)
+    public var listIntervention = arrayListOf<Intervention>()
+    var adapter = InterventionAdapter(listIntervention , this , adapter = null)
     @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    private fun getData(fileName : String , datePickerValue:String,context: Context) : ArrayList<Intervention>{
+    fun getData(fileName : String , datePickerValue:String,context: Context) : ArrayList<Intervention>{
         try {
             var json = JSONArray(readFile(fileName , context))
             var i = json.length() - 1
@@ -135,5 +135,23 @@ class MainActivity : AppCompatActivity() {
         listIntervention = getData("file" , "" , this)
 
     }
+
+    public fun deleteItem(position : Int , listIntervention : ArrayList<Intervention>){
+
+        this.listIntervention.minus(listIntervention[position])
+        adapter.notifyDataSetChanged()
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
